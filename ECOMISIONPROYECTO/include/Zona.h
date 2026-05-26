@@ -1,16 +1,33 @@
 #ifndef ZONA_H
 #define ZONA_H
 
+#include <string>
+#include <vector>
+#include <iostream>
 
-class Zona
-{
-    public:
-        Zona();
-        virtual ~Zona();
+class ElementoInteractivo;
+class Explorador;
 
-    protected:
+class Zona {
+private:
+    std::string nombre;
+    std::vector<ElementoInteractivo*> elementos;
 
-    private:
+public:
+    Zona(const std::string& nombre);
+    ~Zona();
+
+    void agregarElemento(ElementoInteractivo* elemento);
+    void mostrarElementos() const;
+
+    void interactuar(int indice, Explorador* explorador);
+    void interactuar(const std::string& nombre, Explorador* explorador);
+
+    std::string getNombre() const;
+    void mostrarInfo() const;
+
+    bool tieneResiduosSinLimpiar() const;
+    bool tieneFuentesSinRestaurar() const;
 };
 
-#endif // ZONA_H
+#endif

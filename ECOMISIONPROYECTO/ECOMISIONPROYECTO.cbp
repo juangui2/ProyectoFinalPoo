@@ -11,15 +11,33 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc-mingw32" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/ECOMISIONPROYECTO" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc-mingw32" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
 			</Target>
 		</Build>
+		<Unit filename="include/Ecomision.h" />
+		<Unit filename="include/ElementoInteractivo.h" />
+		<Unit filename="include/Elementos.h" />
+		<Unit filename="include/Explorador.h" />
+		<Unit filename="include/Reserva.h" />
+		<Unit filename="include/Zona.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Ecomision.cpp" />
+		<Unit filename="src/ElementoInteractivo.cpp" />
+		<Unit filename="src/Elementos.cpp" />
+		<Unit filename="src/Explorador.cpp" />
+		<Unit filename="src/Reserva.cpp" />
+		<Unit filename="src/Zona.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -1,16 +1,25 @@
-#ifndef ELEMENTOINTERACTIVO_H
-#define ELEMENTOINTERACTIVO_H
+#ifndef ELEMENTO_INTERACTIVO_H
+#define ELEMENTO_INTERACTIVO_H
 
+#include <string>
+#include <iostream>
 
-class ElementoInteractivo
-{
-    public:
-        ElementoInteractivo();
-        virtual ~ElementoInteractivo();
+class Explorador;
 
-    protected:
+class ElementoInteractivo {
+private:
+    std::string nombre;
 
-    private:
+public:
+    ElementoInteractivo(const std::string& nombre);
+    virtual ~ElementoInteractivo();
+
+    virtual void interactuar(Explorador* explorador) = 0;
+    virtual std::string getTipo() const = 0;
+    virtual std::string getEfecto() const = 0;
+    virtual bool fueUsado() const = 0;
+
+    std::string getNombre() const;
 };
 
-#endif // ELEMENTOINTERACTIVO_H
+#endif
