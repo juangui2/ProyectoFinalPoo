@@ -20,8 +20,9 @@ public:
     void agregarElemento(ElementoInteractivo* elemento);
     void mostrarElementos() const;
 
+    // Sobrecarga: interactuar por indice o por nombre
     void interactuar(int indice, Explorador* explorador);
-    void interactuar(const std::string& nombre, Explorador* explorador);
+    void interactuar(const std::string& nombreElemento, Explorador* explorador);
 
     std::string getNombre() const;
     void mostrarInfo() const;
