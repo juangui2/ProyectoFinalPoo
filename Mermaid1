@@ -1,0 +1,126 @@
+intermedio: mermaid
+classDiagram
+
+    class EcoMision {
+        - reserva : Reserva
+        - explorador : Explorador
+        - activo : bool
+        + iniciar()
+        + prepararReserva()
+        + mostrarBienvenida()
+        + turno()
+    }
+
+    class Reserva {
+        - zonas : unordered_map~string, Zona~
+        - codigos : vector~string~
+        + agregarZona(codigo, zona)
+        + buscarZona(codigo) Zona
+        + mostrarZonas()
+        + ~Reserva()
+    }
+
+    class Zona {
+        - nombre : string
+        - elementos : vector~ElementoInteractivo~
+        + agregarElemento(e)
+        + mostrarElementos()
+        + interactuar(indice, explorador)
+        + interactuar(nombre, explorador)
+        + ~Zona()
+    }
+
+    class Explorador {
+        - nombre : string
+        - energia : int
+        - puntaje : int
+        - zonaActual : Zona
+        - inventario : vector~ElementoInteractivo~
+        + cambiarZona(zona)
+        + perderEnergia(cantidad)
+        + recuperarEnergia(cantidad)
+        + aumentarPuntaje(puntos)
+        + recolectar(elemento)
+        + mostrarEstado()
+    }
+
+    class ElementoInteractivo {
+        <<abstract>>
+        - nombre : string
+        + interactuar(explorador)*
+        + getTipo() string*
+        + getEfecto() string*
+        + fueUsado() bool*
+        + ~ElementoInteractivo()
+    }
+
+    class AnimalHerido {
+        - curado : bool
+        + interactuar(explorador)
+        + getTipo() string
+        + getEfecto() string
+        + fueUsado() bool
+    }
+
+    class PlantaMedicinal {
+        - recolectada : bool
+        + interactuar(explorador)
+        + getTipo() string
+        + getEfecto() string
+        + fueUsado() bool
+    }
+
+    class ResiduoContaminante {
+        - limpiado : bool
+        + interactuar(explorador)
+        + getTipo() string
+        + getEfecto() string
+        + fueUsado() bool
+    }
+
+    class EstacionEnergia {
+        - carga : int
+        + interactuar(explorador)
+        + getTipo() string
+        + getEfecto() string
+        + fueUsado() bool
+    }
+
+    class PortalDeRuta {
+        - destino : Zona
+        + interactuar(explorador)
+        + getTipo() string
+        + getEfecto() string
+        + fueUsado() bool
+    }
+
+    class FuenteContaminada {
+        - restaurada : bool
+        + interactuar(explorador)
+        + getTipo() string
+        + getEfecto() string
+        + fueUsado() bool
+    }
+
+    class ObstaculoAmbiental {
+        - superado : bool
+        + interactuar(explorador)
+        + getTipo() string
+        + getEfecto() string
+        + fueUsado() bool
+    }
+
+    EcoMision o-- Reserva
+    EcoMision o-- Explorador
+    Reserva o-- Zona
+    Zona o-- ElementoInteractivo
+    Explorador --> Zona
+    PortalDeRuta --> Zona
+
+    ElementoInteractivo <|-- AnimalHerido
+    ElementoInteractivo <|-- PlantaMedicinal
+    ElementoInteractivo <|-- ResiduoContaminante
+    ElementoInteractivo <|-- EstacionEnergia
+    ElementoInteractivo <|-- PortalDeRuta
+    ElementoInteractivo <|-- FuenteContaminada
+    ElementoInteractivo <|-- ObstaculoAmbiental
