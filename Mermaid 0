@@ -1,73 +1,71 @@
-```mermaid
 classDiagram
-
     class EcoMision {
-        - reserva : Reserva
-        - explorador : Explorador
-        + iniciar()
-        + prepararReserva()
+        -Reserva reserva
+        -Explorador explorador
+        +iniciar()
+        +prepararReserva()
     }
 
     class Reserva {
-        - zonas : unordered_map~string, Zona~
-        + agregarZona(codigo, zona)
-        + buscarZona(codigo) Zona
-        + mostrarZonas()
+        -unordered_map_string_Zona zonas
+        +agregarZona(codigo, zona)
+        +buscarZona(codigo) Zona
+        +mostrarZonas()
     }
 
     class Zona {
-        - nombre : string
-        - elementos : vector~ElementoInteractivo~
-        + agregarElemento(e)
-        + mostrarElementos()
-        + interactuar(indice, explorador)
-        + interactuar(nombre, explorador)
+        -string nombre
+        -vector_ElementoInteractivo elementos
+        +agregarElemento(e)
+        +mostrarElementos()
+        +interactuar(indice, explorador)
+        +interactuar(nombre, explorador)
     }
 
     class Explorador {
-        - nombre : string
-        - energia : int
-        - puntaje : int
-        - zonaActual : Zona
-        + cambiarZona(zona)
-        + perderEnergia(cantidad)
-        + recuperarEnergia(cantidad)
-        + aumentarPuntaje(puntos)
-        + mostrarEstado()
+        -string nombre
+        -int energia
+        -int puntaje
+        -Zona zonaActual
+        +cambiarZona(zona)
+        +perderEnergia(cantidad)
+        +recuperarEnergia(cantidad)
+        +aumentarPuntaje(puntos)
+        +mostrarEstado()
     }
 
     class ElementoInteractivo {
         <<abstract>>
-        - nombre : string
-        + interactuar(explorador)*
+        -string nombre
+        +interactuar(explorador)*
     }
 
     class AnimalHerido {
-        + interactuar(explorador)
+        +interactuar(explorador)
     }
 
     class PlantaMedicinal {
-        + interactuar(explorador)
+        +interactuar(explorador)
     }
 
     class ResiduoContaminante {
-        + interactuar(explorador)
+        +interactuar(explorador)
     }
 
     class EstacionEnergia {
-        + interactuar(explorador)
+        +interactuar(explorador)
     }
 
     class PortalDeRuta {
-        + interactuar(explorador)
+        +interactuar(explorador)
     }
 
     class FuenteContaminada {
-        + interactuar(explorador)
+        +interactuar(explorador)
     }
 
     class ObstaculoAmbiental {
-        + interactuar(explorador)
+        +interactuar(explorador)
     }
 
     EcoMision o-- Reserva
