@@ -6,7 +6,6 @@
 
 class Zona;
 
-// ─── AnimalHerido ───────────────────────────────────────────────
 class AnimalHerido : public ElementoInteractivo {
 private:
     bool curado;
@@ -18,7 +17,6 @@ public:
     bool fueUsado() const override;
 };
 
-// ─── PlantaMedicinal ────────────────────────────────────────────
 class PlantaMedicinal : public ElementoInteractivo {
 private:
     bool recolectada;
@@ -30,7 +28,6 @@ public:
     bool fueUsado() const override;
 };
 
-// ─── ResiduoContaminante ────────────────────────────────────────
 class ResiduoContaminante : public ElementoInteractivo {
 private:
     bool limpiado;
@@ -42,7 +39,6 @@ public:
     bool fueUsado() const override;
 };
 
-// ─── EstacionEnergia ────────────────────────────────────────────
 class EstacionEnergia : public ElementoInteractivo {
 private:
     int carga;
@@ -54,7 +50,6 @@ public:
     bool fueUsado() const override;
 };
 
-// ─── PortalDeRuta ───────────────────────────────────────────────
 class PortalDeRuta : public ElementoInteractivo {
 private:
     Zona* destino;
@@ -66,7 +61,7 @@ public:
     bool fueUsado() const override;
 };
 
-// ─── FuenteContaminada ──────────────────────────────────────────
+
 class FuenteContaminada : public ElementoInteractivo {
 private:
     bool restaurada;
@@ -79,7 +74,7 @@ public:
     bool fueUsado() const override;
 };
 
-// ─── ObstaculoAmbiental ─────────────────────────────────────────
+
 class ObstaculoAmbiental : public ElementoInteractivo {
 private:
     bool superado;

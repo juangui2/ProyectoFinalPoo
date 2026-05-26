@@ -1,11 +1,11 @@
 #include "ElementoInteractivo.h"
 
-ElementoInteractivo::ElementoInteractivo()
-{
-    //ctor
+ElementoInteractivo::ElementoInteractivo(const std::string& nombre) {
+    this->nombre = nombre;
 }
 
-ElementoInteractivo::~ElementoInteractivo()
-{
-    //dtor
+ElementoInteractivo::~ElementoInteractivo() {}
+
+std::string ElementoInteractivo::getNombre() const {
+    return nombre;
 }

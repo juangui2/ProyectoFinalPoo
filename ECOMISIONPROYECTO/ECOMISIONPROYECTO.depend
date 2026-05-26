@@ -1,60 +1,59 @@
 # depslib dependency file v1.0
-1779719133 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\main.cpp
+1779820217 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\main.cpp
 	"EcoMision.h"
 
-1779810356 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\ecomision.h
+1779820912 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\ecomision.h
 	"Reserva.h"
 	"Explorador.h"
 
-1779719127 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\reserva.h
+1779820942 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\reserva.h
 	<string>
+	<vector>
 	<unordered_map>
 	<iostream>
 	"Zona.h"
 
-1779719199 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\zona.h
+1779832402 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\zona.h
 	<string>
 	<vector>
 	<iostream>
 
-1779719155 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\explorador.h
+1779821131 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\explorador.h
 	<string>
 	<vector>
 	<iostream>
 
-1779719165 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\elementointeractivo.cpp
+1779821108 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\elementointeractivo.cpp
 	"ElementoInteractivo.h"
 
-1779719162 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\elementointeractivo.h
+1779821671 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\elementointeractivo.h
 	<string>
 	<iostream>
 
-1779719169 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\elementos.cpp
+1779832343 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\elementos.cpp
 	"Elementos.h"
 	"Zona.h"
 
-1779718863 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\elementos.h
+1779832283 c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\include\elementos.h
 	"ElementoInteractivo.h"
 	"Explorador.h"
 
-1779719159 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\explorador.cpp
+1779821145 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\explorador.cpp
 	"Explorador.h"
 	"Zona.h"
 	"ElementoInteractivo.h"
 
-1779719063 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\reserva.cpp
+1779820960 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\reserva.cpp
 	"Reserva.h"
 
-1779719149 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\zona.cpp
+1779832410 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\zona.cpp
 	"Zona.h"
 	"ElementoInteractivo.h"
 	"Explorador.h"
 
-1779719507 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\ecomision.cpp
+1779832946 source:c:\users\juan\onedrive\desktop\proyectofinalpoo\ecomisionproyecto\src\ecomision.cpp
 	"EcoMision.h"
 	"Elementos.h"
 	<iostream>
 	<string>
-	<map>
-	<unordered_map>
 
